@@ -14,7 +14,7 @@ y = data[:,-1]
 ids = data[:,0]
 x_train = np.array(x_train)
 y = np.array(y)
-clf = ak.StructuredDataClassifier(num_classes=4, objective='val_accuracy')
+clf = ak.StructuredDataClassifier(num_classes=4,objective='val_accuracy',max_trials=50)
 clf.fit(x_train, y)
 
 
